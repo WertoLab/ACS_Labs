@@ -1,0 +1,10 @@
+lab2domen.duckdns.org {
+        root * /usr/share/caddy
+        file_server
+
+        log {
+                output file {{ log.file }}
+                format json
+                level {{ log.level }}
+        }
+}

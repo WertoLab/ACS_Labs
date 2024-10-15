@@ -1,0 +1,9 @@
+---
+# vars file for caddy_deploy
+
+domain_name: lab2domen.duckdns.org
+
+log:
+  file: /var/log/caddy_access.log
+  level: "INFO"
+

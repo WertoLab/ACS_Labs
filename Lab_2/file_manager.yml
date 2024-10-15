@@ -1,0 +1,28 @@
+---
+- name: Manage a file with Ansible
+  hosts: localhost
+  tasks:
+    - name: Create a file
+      file:
+        path: $HOME/example_file.txt
+        state: touch
+
+    - name: Write initial data to the file
+      copy:
+        content: |
+          This is the initial content of the file.
+          It will be modified later.
+        dest: $HOME/example_file.txt
+
+    - name: Modify data in the file
+      lineinfile:
+        path: $HOME/example_file.txt
+        regexp: 'initial content'
+        line: 'This is the modified content of the file.'
+
+    - name: Delete the file
+      file:
+        path: $HOME/example_file.txt
+        state: absent
+
+
