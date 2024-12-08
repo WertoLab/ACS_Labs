@@ -1,5 +1,3 @@
-1# Лабораторная работа №2: PostgreSQL Cluster с Patroni, ZooKeeper и HAProxy
-
 ### Выполнение:
 
 1. **Проверка работы репликации**  
